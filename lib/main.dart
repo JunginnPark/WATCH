@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'community_screen.dart';
 import 'promise_screen.dart';
 
 void main() {
@@ -10,12 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'watch_app',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: PromiseScreen()
-        //CommunityScreen()
-        );
+      title: 'watch_app',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      // home: PromiseScreen()
+      home: CommunityScreen(),
+    );
   }
 }
