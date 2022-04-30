@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screen/calendar_test_screen.dart';
 import 'screen/community_screen.dart';
 import 'screen/promise_screen.dart';
 import 'package:provider/provider.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       // home: PromiseScreen()
       home: ChangeNotifierProvider(
         create: (context) => DrawingProvider(),
-        child: CommunityScreen(),
+        child: CalendarTestScreen(),
         // child: CommunityScreen(),
         // child: PromiseScreen(),
       ),
