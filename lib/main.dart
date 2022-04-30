@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'community_screen.dart';
-import 'promise_screen.dart';
+import 'screen/community_screen.dart';
+import 'screen/promise_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'utils/drawing_provider.dart';
@@ -21,8 +21,9 @@ class MyApp extends StatelessWidget {
       // home: PromiseScreen()
       home: ChangeNotifierProvider(
         create: (context) => DrawingProvider(),
+        child: CommunityScreen(),
         // child: CommunityScreen(),
-        child: PromiseScreen(),
+        // child: PromiseScreen(),
       ),
     );
   }

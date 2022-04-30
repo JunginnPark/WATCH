@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'models/dot_info.dart';
-import 'utils/drawing_provider.dart';
+import '../models/dot_info.dart';
+import '../utils/drawing_provider.dart';
 
 class PromiseScreen extends StatefulWidget {
   const PromiseScreen({Key? key}) : super(key: key);
