@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/calendar.dart';
 
 class CalendarTestScreen extends StatefulWidget {
+  // CalendarModel 테스트를 위한 화면
   const CalendarTestScreen({Key? key}) : super(key: key);
 
   @override

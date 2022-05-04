@@ -6,6 +6,7 @@ import '../models/dot_info.dart';
 
 class DrawingProvider extends ChangeNotifier {
   final lines = <List<DotInfo>>[];
+  // lines가 화면에 보여지는 선들의 집합, 이것을 저장하고 다시 불러오면 동일한 화면을 볼 수 있을 것
 
   double _size = 3;
   double get size => _size;

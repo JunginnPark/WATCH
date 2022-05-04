@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:watch_app/service/server_connection.dart';
 
 class CommentScreen extends StatefulWidget {
+  // Server에서 comment 불러와서 보여주는 화면
   const CommentScreen({Key? key}) : super(key: key);
 
   @override

@@ -6,6 +6,7 @@ import '../models/dot_info.dart';
 import '../utils/drawing_provider.dart';
 
 class PromiseScreen extends StatefulWidget {
+  // 그림판 기능 구현, 선 두께 & 색 변경 가능
   const PromiseScreen({Key? key}) : super(key: key);
 
   @override
