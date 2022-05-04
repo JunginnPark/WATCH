@@ -10,6 +10,7 @@ class CalendarModel extends StatefulWidget {
 }
 
 class _CalendarModelState extends State<CalendarModel> {
+  // 현재 날짜를 기준으로 달력을 생성한다. 월을 변경하는 기능이 포함되어 있으며, test_date를 기반으로 달력에 연속 금연 성공을 표기한다
   DateTime now = DateTime.now();
   final List<String> date_list = [
     "Sun",
