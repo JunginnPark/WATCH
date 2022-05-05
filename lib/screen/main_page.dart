@@ -84,7 +84,7 @@ class _MainPageState extends State<MainPage> {
               color: Colors.pink,
               child: const Center(
                 child: Text(
-                  'Community Screen',
+                  'Calendar Screen',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 20,
