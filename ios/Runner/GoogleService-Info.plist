@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>239682690514-7mgqj17koc2leth0u96cb6bgiokiplpr.apps.googleusercontent.com</string>
+	<string>518054015538-gtmq76jjbkk0c1c9dq3dnb4hftou32h5.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.239682690514-7mgqj17koc2leth0u96cb6bgiokiplpr</string>
+	<string>com.googleusercontent.apps.518054015538-gtmq76jjbkk0c1c9dq3dnb4hftou32h5</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBQgKGXLBfmts4_0EedAk3TCdu3EzmOW3c</string>
+	<string>AIzaSyDYtM07wPKUWcesVp9eMNCVLp1-FzpTpFE</string>
 	<key>GCM_SENDER_ID</key>
-	<string>239682690514</string>
+	<string>518054015538</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.watchApp</string>
+	<string>com.watchTeam.watchApp</string>
 	<key>PROJECT_ID</key>
-	<string>watch-app-72f39</string>
+	<string>still-watch-befc3</string>
 	<key>STORAGE_BUCKET</key>
-	<string>watch-app-72f39.appspot.com</string>
+	<string>still-watch-befc3.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:239682690514:ios:2d80b619d5cad7e880fc0b</string>
+	<string>1:518054015538:ios:d90a65d2b74e434517822b</string>
 </dict>
 </plist>
