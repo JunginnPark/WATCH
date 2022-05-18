@@ -56,4 +56,11 @@ class DrawingProvider extends ChangeNotifier {
     }
     notifyListeners();
   }
+
+  void print_value() {
+    print(lines);
+    print(lines[0][0].offset);
+    print(lines[0][0].color);
+    print(lines[0][0].size);
+  }
 }

@@ -113,6 +113,24 @@ class _PromiseScreenState extends State<PromiseScreen> {
                           ),
                         ),
                       ),
+                    ),
+                    GestureDetector(
+                      behavior: HitTestBehavior.translucent,
+                      onTap: () {
+                        p.print_value();
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 15),
+                        child: Text(
+                          '출력',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight:
+                                p.eraseMode ? FontWeight.w900 : FontWeight.w300,
+                          ),
+                        ),
+                      ),
                     )
                   ],
                 ),
