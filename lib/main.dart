@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => DrawingProvider()),
       ],
       child: MaterialApp(
-        title: 'watch_app',
+        title: 'WatApp',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
