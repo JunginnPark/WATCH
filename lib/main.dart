@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'service/sync_firebase.dart';
+import 'package:watch_app/screen/calendar_test_screen.dart';
+import 'package:watch_app/screen/community_screen.dart';
+import 'package:watch_app/screen/login_screen.dart';
+import 'package:watch_app/screen/main_page.dart';
+import 'package:watch_app/screen/promise_screen.dart';
 import 'utils/drawing_provider.dart';
 
 void main() {
@@ -21,7 +24,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const SyncFB(),
+        home: const MainPage(),
       ),
     );
   }
