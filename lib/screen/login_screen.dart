@@ -8,6 +8,10 @@ import 'package:google_sign_in/google_sign_in.dart';
 // import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+import 'package:flutter/src/material/colors.dart';
+import 'package:watch_app/screen/main_page.dart';
+
+import 'main_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -102,107 +106,83 @@ class _LoginScreen extends State<LoginScreen> {
     final txtColor = Color(0xffFFFDFD); //텍스트 , 앱바 텍스트 색
     final linetxtColor = Color(0xffAA8F9D); //라인-텍스트-라인 색
     double defaultSize = valWidth * 0.0025; //폰트사이즈용
-
+    final frontColor = Colors.black.withOpacity(0.3);
     // _firebaseCloudMessaging_Listeners();
 
     return Scaffold(
-      backgroundColor: bgColor,
+      resizeToAvoidBottomInset: false,
       body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          SizedBox(
-            height: valHeight * 0.25,
-          ), // 가장 위 빈 공간
-          // CircleAvatar(
-          //   radius: valWidth * 0.12,
-          //   child: Image.asset('images/app_logo.png'), //나중 여기에 앱아이콘
-          //   // child: SvgPicture.asset('images/appLogo.svg'), //나중 여기에 앱아이콘
-          // ),
-          SizedBox(
-            width: valWidth * 0.35,
-            // child: Image.asset('images/app_logo.png'), //나중 여기에 앱아이콘
-            // child: Image.asset('images/appLogo.png'), //나중 여기에 앱아이콘
-            // child: SvgPicture.asset('images/appLogo.svg'), //나중 여기에 앱아이콘
-          ),
-          const SizedBox(
-            height: 100,
-          ),
-          GestureDetector(
-            onTap: () {
-              signInWithApple();
-            },
-            child: Container(
-                height: 44,
-                width: valWidth * 0.73,
-                // alignment: Alignment(0, -0.2),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(valWidth * 0.015),
-                  color: const Color(0XFFFFFFFF),
-                  // color: Color(0xff333C47),
-                ),
-                child: Stack(
-                  // mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8.0),
-                      child: SvgPicture.asset('images/appleLogIn.svg'),
-                    ),
-                    Center(
-                      child: Text(
-                        "Sign in with Apple",
-                        style: TextStyle(
-                          // color: txtColor,
-                          // color: Color(0XFF000000),
-                          color: Colors.black,
-                          fontSize: defaultSize * 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.center,
+          child: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          fit: BoxFit.fill,
+          colorFilter: ColorFilter.mode(frontColor, BlendMode.srcATop),
+          image: AssetImage('images/page-5.png'), // 배경 이미지
+        )),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            SizedBox(
+              height: valHeight * 0.5,
+            ), // 가장 위 빈 공간
+            // CircleAvatar(
+            //   radius: valWidth * 0.12,
+            //   child: Image.asset('images/app_logo.png'), //나중 여기에 앱아이콘
+            //   // child: SvgPicture.asset('images/appLogo.svg'), //나중 여기에 앱아이콘
+            // ),
+            SizedBox(
+              width: valWidth * 0.35,
+              // child: Image.asset('images/app_logo.png'), //나중 여기에 앱아이콘
+              // child: Image.asset('images/appLogo.png'), //나중 여기에 앱아이콘
+              // child: SvgPicture.asset('images/appLogo.svg'), //나중 여기에 앱아이콘
+            ),
+            const SizedBox(
+              height: 100,
+            ),
+
+            const SizedBox(
+              height: 10,
+            ),
+            GestureDetector(
+              onTap: () {
+                //signInWithGoogle();
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MainScreen()));
+              },
+              child: Container(
+                  height: 44,
+                  width: valWidth * 0.73,
+                  // alignment: Alignment(0, -0.2),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(valWidth * 0.015),
+                    //color: Color(0xff333C47),
+                    color: Color(0XFFFFFFFF),
+                  ),
+                  child: Stack(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: SvgPicture.asset('images/googleLogIn.svg'),
                       ),
-                    ),
-                  ],
-                ) //구글 계정 로그인 버튼
-                ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          GestureDetector(
-            onTap: () {
-              signInWithGoogle();
-            },
-            child: Container(
-                height: 44,
-                width: valWidth * 0.73,
-                // alignment: Alignment(0, -0.2),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(valWidth * 0.015),
-                  // color: Color(0xff333C47),
-                  color: Color(0XFFFFFFFF),
-                ),
-                child: Stack(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8.0),
-                      child: SvgPicture.asset('images/googleLogIn.svg'),
-                    ),
-                    Center(
-                      child: Text(
-                        "Sign in with Google",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: defaultSize * 15,
-                          fontWeight: FontWeight.bold,
+                      Center(
+                        child: Text(
+                          "Sign in with Google",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: defaultSize * 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
                       ),
-                    ),
-                  ],
-                ) //구글 계정 로그인 버튼
-                ),
-          ),
-        ],
+                    ],
+                  ) //구글 계정 로그인 버튼
+                  ),
+            ),
+          ],
+        ),
       )),
     );
   }
