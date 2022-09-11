@@ -212,6 +212,18 @@ class _CalendarModelState extends State<CalendarModel> {
             ),
           ],
         ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(date_list[0]),
+            Text(date_list[1]),
+            Text(date_list[2]),
+            Text(date_list[3]),
+            Text(date_list[4]),
+            Text(date_list[5]),
+            Text(date_list[6]),
+          ],
+        ),
         Column(
           children: calendar_full,
         ),
