@@ -92,13 +92,13 @@ class _CalendarModelState extends State<CalendarModel> {
             date: calendar_date_list[i].toString(),
             date_color: Colors.white,
             date_decoration: BoxDecoration(
-              color: const Color(0xff74B0DD),
+              color: const Color(0xffFEC226),
               borderRadius: const BorderRadius.only(
-                topRight: Radius.circular(50),
-                bottomRight: Radius.circular(50),
+                topRight: Radius.circular(10),
+                bottomRight: Radius.circular(10),
               ),
               border: Border.all(
-                color: const Color(0xff74B0DD),
+                color: const Color(0xffFEC226),
               ),
             ),
             is_diary: test_date_diary.contains(calendar_date_list[i]),
@@ -110,13 +110,13 @@ class _CalendarModelState extends State<CalendarModel> {
             date: calendar_date_list[i].toString(),
             date_color: Colors.white,
             date_decoration: BoxDecoration(
-              color: const Color(0xff74B0DD),
+              color: const Color(0xffFEC226),
               borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(50),
-                bottomLeft: Radius.circular(50),
+                topLeft: Radius.circular(10),
+                bottomLeft: Radius.circular(10),
               ),
               border: Border.all(
-                color: const Color(0xff74B0DD),
+                color: const Color(0xffFEC226),
               ),
             ),
             is_diary: test_date_diary.contains(calendar_date_list[i]),
@@ -129,9 +129,9 @@ class _CalendarModelState extends State<CalendarModel> {
           date: calendar_date_list[i].toString(),
           date_color: Colors.white,
           date_decoration: BoxDecoration(
-            color: const Color(0xff74B0DD),
+            color: const Color(0xffFEC226),
             border: Border.all(
-              color: const Color(0xff74B0DD),
+              color: const Color(0xffFEC226),
             ),
           ),
           is_diary: test_date_diary.contains(calendar_date_list[i]),
@@ -143,7 +143,7 @@ class _CalendarModelState extends State<CalendarModel> {
           date_color: Colors.white,
           date_decoration: const BoxDecoration(
             color: Color(0xffEC6A5C),
-            shape: BoxShape.circle,
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
           ),
           date_margin: EdgeInsets.all(3),
         ));
