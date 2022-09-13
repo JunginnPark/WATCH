@@ -24,6 +24,7 @@ class _MainScreenState extends State<MainScreen> {
     final quitDay = 15; //금연 지속 날짜
     final Money = 4500 * quitDay; //절약 금액
     final lifeDay = 0.1 * quitDay; //절약 금액
+    final thing = '에어팟 1.2개'; //절약 물품
 
     return Container(
       decoration: const BoxDecoration(
@@ -44,7 +45,7 @@ class _MainScreenState extends State<MainScreen> {
                         children: [
                           Column(
                             children: [
-                              SizedBox(height: valHeight * 0.05),
+                              SizedBox(height: valHeight * 0.08),
                               Row(
                                 children: [
                                   SizedBox(
@@ -54,7 +55,7 @@ class _MainScreenState extends State<MainScreen> {
                                     "우리가 함께한지",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: valHeight * 0.04,
+                                        fontSize: valHeight * 0.03,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ],
@@ -69,7 +70,7 @@ class _MainScreenState extends State<MainScreen> {
                                       '$quitDay',
                                       style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: valHeight * 0.18,
+                                          fontSize: valWidth * 0.33,
                                           fontWeight: FontWeight.bold),
                                     ),
                                     Text(
@@ -77,7 +78,7 @@ class _MainScreenState extends State<MainScreen> {
                                       textAlign: TextAlign.end,
                                       style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: valHeight * 0.035,
+                                          fontSize: valHeight * 0.03,
                                           fontWeight: FontWeight.bold),
                                     ),
                                   ]),
@@ -86,21 +87,21 @@ class _MainScreenState extends State<MainScreen> {
                           SizedBox(width: valWidth * 0.25),
                           Column(
                             children: [
-                              SizedBox(height: valHeight * 0.05),
+                              SizedBox(height: valHeight * 0.08),
                               IconButton(
                                 onPressed: null,
                                 padding: const EdgeInsets.all(1.0),
                                 icon: ImageIcon(
-                                  const AssetImage("images/settings.svg"),
+                                  const AssetImage("images/settings.png"),
                                   color: Colors.black,
-                                  size: valHeight * 0.1,
+                                  size: valWidth * 0.1,
                                 ),
                               ),
                               IconButton(
                                 onPressed: null,
                                 padding: const EdgeInsets.all(1.0),
                                 icon: ImageIcon(
-                                  const AssetImage("images/comm.svg"),
+                                  const AssetImage("images/comm.png"),
                                   color: Colors.black,
                                   size: valWidth * 0.1,
                                 ),
@@ -119,95 +120,137 @@ class _MainScreenState extends State<MainScreen> {
                     color: Colors.black,
                   ),
                   Container(
-                    height: valHeight * 0.4,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    height: valHeight * 0.25,
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          height: valHeight * 0.2,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Row(
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              height: valHeight * 0.15,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                        width: valWidth * 0.07,
+                                      ),
+                                      Text(
+                                        "절약한 금액",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: valWidth * 0.07,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
                                   SizedBox(
-                                    width: valWidth * 0.07,
+                                    height: valHeight * 0.03,
                                   ),
-                                  Text(
-                                    "절약한 금액",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: valHeight * 0.04,
-                                        fontWeight: FontWeight.normal),
-                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                        width: valWidth * 0.07,
+                                      ),
+                                      Text(
+                                        "연장한 수명",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: valWidth * 0.07,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  )
                                 ],
                               ),
-                              SizedBox(
-                                height: valHeight * 0.03,
-                              ),
-                              Row(
+                            ),
+                            Container(
+                              height: valHeight * 0.15,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "$Money 원",
+                                        style: TextStyle(
+                                            color: Color(0xffFEC226),
+                                            fontSize: valWidth * 0.09,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      SizedBox(
+                                        width: valWidth * 0.07,
+                                      ),
+                                    ],
+                                  ),
                                   SizedBox(
-                                    width: valWidth * 0.07,
+                                    height: valHeight * 0.027,
                                   ),
-                                  Text(
-                                    "연장한 수명",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: valHeight * 0.04,
-                                        fontWeight: FontWeight.normal),
-                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "$lifeDay 일",
+                                        style: TextStyle(
+                                            color: Color(0xffFEC226),
+                                            fontSize: valWidth * 0.09,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      SizedBox(
+                                        width: valWidth * 0.07,
+                                      ),
+                                    ],
+                                  )
                                 ],
-                              )
-                            ],
-                          ),
+                              ),
+                            ),
+                          ],
                         ),
-                        Container(
-                          height: valHeight * 0.2,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    "$Money 원",
-                                    style: TextStyle(
-                                        color: Color(0xffFEC226),
-                                        fontSize: valHeight * 0.05,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  SizedBox(
-                                    width: valWidth * 0.07,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: valHeight * 0.03,
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    "$lifeDay 일",
-                                    style: TextStyle(
-                                        color: Color(0xffFEC226),
-                                        fontSize: valHeight * 0.05,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  SizedBox(
-                                    width: valWidth * 0.07,
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: valWidth * 0.07,
+                                ),
+                                Text(
+                                  '금연한 이후로 지금까지',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: valWidth * 0.05,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: valWidth * 0.07,
+                                ),
+                                Text(
+                                  '$thing을 절약했어요!',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: valWidth * 0.07,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            )
+                          ],
+                        )
                       ],
                     ),
                   ),
-                  CalendarModel()
+                  CalendarModel(),
+                  SizedBox(
+                    height: valHeight * 0.1,
+                  ),
                 ],
               ))),
     );

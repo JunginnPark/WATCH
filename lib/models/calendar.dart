@@ -197,6 +197,9 @@ class _CalendarModelState extends State<CalendarModel> {
 
   @override
   Widget build(BuildContext context) {
+    final valHeight = MediaQuery.of(context).size.height; //화면 높이
+    final valWidth = MediaQuery.of(context).size.width; //화면 너비
+
     return Column(
       children: [
         Row(
@@ -227,7 +230,46 @@ class _CalendarModelState extends State<CalendarModel> {
         Column(
           children: calendar_full,
         ),
-        Text('선택한 날짜 : ' + date_num.toString()),
+        SizedBox(height: valHeight * 0.03),
+        Container(
+          width: valWidth * 0.9,
+          height: valHeight * 0.23,
+          decoration: BoxDecoration(
+              color: const Color(0xff1F1F1F),
+              borderRadius: BorderRadius.circular(20)),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                DateFormat('M').format(now) +
+                    ' 월 ' +
+                    date_num.toString() +
+                    ' 일',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: valHeight * 0.03,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: valHeight * 0.04),
+              Text(
+                '아직 금연일지가 작성되어 있지 않습니다.',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: valHeight * 0.02,
+                    fontWeight: FontWeight.normal),
+              ),
+              const IconButton(
+                padding: EdgeInsets.all(0.0),
+                onPressed: null,
+                icon: Icon(
+                  Icons.add,
+                  color: Colors.white,
+                  size: 50,
+                ),
+              )
+            ],
+          ),
+        ),
       ],
     );
   }
@@ -238,7 +280,7 @@ class _CalendarModelState extends State<CalendarModel> {
     required Color date_color,
     int? block,
     BoxDecoration? date_decoration,
-    EdgeInsets date_margin = const EdgeInsets.only(top: 10, bottom: 10),
+    EdgeInsets date_margin = const EdgeInsets.only(top: 3, bottom: 3),
     bool is_diary = false, // 해당 날짜에 일지가 있는지
   }) {
     return Expanded(
