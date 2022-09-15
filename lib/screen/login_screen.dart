@@ -113,11 +113,13 @@ class _LoginScreen extends State<LoginScreen> {
       resizeToAvoidBottomInset: false,
       body: Center(
           child: Container(
+        width: valWidth,
+        height: valHeight,
         decoration: BoxDecoration(
             image: DecorationImage(
-          fit: BoxFit.fill,
+          fit: BoxFit.fitHeight,
           colorFilter: ColorFilter.mode(frontColor, BlendMode.srcATop),
-          image: AssetImage('images/page-5.png'), // 배경 이미지
+          image: AssetImage('images/main.png'), // 배경 이미지
         )),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
