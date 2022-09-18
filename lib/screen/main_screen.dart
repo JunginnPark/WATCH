@@ -39,13 +39,13 @@ class _MainScreenState extends State<MainScreen> {
               child: Column(
                 children: <Widget>[
                   Container(
-                    height: valHeight * 0.315,
+                    height: valHeight * 0.29,
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
                             children: [
-                              SizedBox(height: valHeight * 0.08),
+                              SizedBox(height: valHeight * 0.06),
                               Row(
                                 children: [
                                   SizedBox(
@@ -87,7 +87,7 @@ class _MainScreenState extends State<MainScreen> {
                           SizedBox(width: valWidth * 0.25),
                           Column(
                             children: [
-                              SizedBox(height: valHeight * 0.08),
+                              SizedBox(height: valHeight * 0.06),
                               IconButton(
                                 onPressed: null,
                                 padding: const EdgeInsets.all(1.0),
