@@ -24,9 +24,7 @@ class _Info1ScreenState extends State<Info1Screen> {
               end: Alignment.center,
               colors: [Color(0xff3687D6), Color(0xffffffff)])),
       child: Scaffold(
-        body: Column(children: [
-          Text(),
-        ]),
+        body: Column(children: []),
       ),
     );
   }
