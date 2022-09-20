@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:watch_app/screen/info1_screen.dart';
 import 'package:watch_app/screen/login_screen.dart';
 import 'package:watch_app/screen/main_screen.dart';
 import 'utils/drawing_provider.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const LoginScreen(),
+        home: const Info1Screen(),
       ),
     );
   }
